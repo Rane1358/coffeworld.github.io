@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LOG IN</title>
+    <link rel="icon" type="image/x-icon" href="Assets/PHOTOS/logo.png">
+    <style>
+        .box {
+            border: solid;
+            background-color: rgb(235, 224, 232);
+        }
+
+        div {
+            margin-left: 250px;
+            margin-right: 250px;
+            margin-top: 200px;
+        }
+
+        body {
+            background-color: #fed0ae;
+            width: 100%;
+            height: 100%;
+
+        }
+        .btn{
+            color: white;
+            background-color: rgb(90, 47, 23);
+        }
+    </style>
+    <script>
+        function abc() {
+            var x = document.getElementById("nm");
+            var y = x.value;
+            var p = document.getElementById("pwd");
+            var z = p.value;
+            document.write("Username  - " + y + " & Password - " + z);
+            if (y == "shubham" && z == "1234") {
+                window.location.href = 'index.html';
+
+            }
+            else {
+                alert("Wrong Username or Password");
+                x.value = "";
+                p.value = "";
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <div>
+            <form>
+                <table CELLPADDING="10">
+                    <TR>
+                        <th>
+                            <IMG src="https://icon-library.com/images/log-in-icon/log-in-icon-1.jpg"
+                                height="20px"></IMG>
+                        </th>
+                        <TH>LOG IN</TH>
+                    </TR>
+                    <tr>
+
+                        <th>
+                            <label for="nm">NAME :</label>
+                        </th>
+                        <th>
+                            <input type="text" id="nm" name="nm" placeholder="NAME"></input>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="nm">PASSWORD :</label>
+                        </th>
+                        <th>
+                            <input type="password" id="pwd" name="pwd" placeholder="PASSWORD"></input>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th COLSPAN="2">
+                            <button  class="btn" type="submit" onclick="return abc()">Submit</button>
+                        </th>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

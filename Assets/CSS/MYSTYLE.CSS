@@ -1,0 +1,191 @@
+
+.MLOGO {
+    background-color: rgb(255, 255, 255);
+    padding-top: 3px;
+    height: 100px;
+    /* display: inline-block; */
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn{
+    color: white;
+    background-color: rgb(90, 47, 23);
+}
+
+.cname {
+    padding-top: 12px;
+    font-size: 60px;
+    height: 100px;
+    font-weight: bold;
+    background-color: rgb(241 223 217);
+    color: #87553f;
+    text-align: center;
+    /* display: inline-block; */
+}
+
+.menu {
+    text-align: center;
+    background-color: #683313;
+    height: 50px;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:#fed0ae;
+}
+
+.about {
+    display: flex;
+    text-align: center;
+}
+
+.border {
+    border-style: dotted;
+}
+
+.services {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: justify;
+    box-shadow: 0px 0px 8px 5px grey;
+    transition-property: transform;
+    transition-delay: 1s;
+}
+
+.services:hover {
+    transform: scale(1.1);
+}
+
+.h1 {
+    margin-left: 0px;
+}
+
+;
+
+
+.bubbly-button {
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    background-color:rgb(90, 47, 23);
+    color:white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:before &:after {
+        position: absolute;
+        display: block;
+        width: 140%;
+        height: 100%;
+        left: -20%;
+        z-index: -1000;
+        transition: all ease-in-out 0.5s;
+        background-repeat: no-repeat;
+    }
+
+    &:before {
+        display: none;
+        top: -75%;
+        background-image:radial-gradient(circle, background-color: rgb(255, 0, 129) 20%, transparent 20%),
+            radial-gradient(circle, transparent 20%, $button-bg 20%, transparent 30%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+        //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+    }
+
+    &:after {
+        display: none;
+        bottom: -75%;
+        background-image:
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+        //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+
+    &:active {
+        transform: scale(0.9);
+        background-color: darken($button-bg, 5%);
+        box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    }
+
+    &.animate {
+        &:before {
+            display: block;
+            animation: topBubbles ease-in-out 0.75s forwards;
+        }
+
+        &:after {
+            display: block;
+            animation: bottomBubbles ease-in-out 0.75s forwards;
+        }
+    }
+}
+
+
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.menu .box-container .box {
+    text-align: center;
+}
+
+.menu .box-container .box img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.menu .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+
